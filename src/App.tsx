@@ -5,6 +5,12 @@ import LoginPage from './pages/LoginPage';
 import DashboardPage from './pages/DashboardPage';
 import ProductsPage from './pages/ProductsPage';
 import TraceabilityPage from './pages/TraceabilityPage';
+import ActiveBatchesPage from './pages/ActiveBatchesPage';
+import CompletedBatchesPage from './pages/CompletedBatchesPage';
+import AIAssistantPage from './pages/AIAssistantPage';
+import WMMPage from './pages/WMMPage';
+import TransactionHistoryPage from './pages/TransactionHistoryPage';
+import ProfilePage from './pages/ProfilePage';
 
 function ProtectedRoute({ children }: { children: React.ReactNode }) {
   const { user, loading } = useAuth();
@@ -56,6 +62,54 @@ function AppRoutes() {
         element={
           <ProtectedRoute>
             <TraceabilityPage />
+          </ProtectedRoute>
+        }
+      />
+      <Route
+        path="/active-batches"
+        element={
+          <ProtectedRoute>
+            <ActiveBatchesPage />
+          </ProtectedRoute>
+        }
+      />
+      <Route
+        path="/completed-batches"
+        element={
+          <ProtectedRoute>
+            <CompletedBatchesPage />
+          </ProtectedRoute>
+        }
+      />
+      <Route
+        path="/ai-assistant"
+        element={
+          <ProtectedRoute>
+            <AIAssistantPage />
+          </ProtectedRoute>
+        }
+      />
+      <Route
+        path="/wmm"
+        element={
+          <ProtectedRoute>
+            <WMMPage />
+          </ProtectedRoute>
+        }
+      />
+      <Route
+        path="/transaction-history"
+        element={
+          <ProtectedRoute>
+            <TransactionHistoryPage />
+          </ProtectedRoute>
+        }
+      />
+      <Route
+        path="/profile"
+        element={
+          <ProtectedRoute>
+            <ProfilePage />
           </ProtectedRoute>
         }
       />

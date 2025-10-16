@@ -6,8 +6,8 @@ export type Json =
   | { [key: string]: Json | undefined }
   | Json[]
 
-export type UserRole = 'collector' | 'tester' | 'processing' | 'manufacturing' | 'admin';
-export type Phase = 'collector' | 'tester' | 'processing' | 'manufacturing';
+export type UserRole = 'collector' | 'tester' | 'producer' | 'manufacturer';
+export type Phase = 'collector' | 'tester' | 'producer' | 'manufacturer';
 export type Status = 'pending' | 'approved' | 'rejected';
 
 export interface Database {
